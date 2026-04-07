@@ -72,8 +72,45 @@
     }
     .nav-cta:hover { background: var(--blue-dark); }
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--charcoal); border-radius: 2px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; z-index: 210; }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px; background: var(--charcoal); border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* ─── Mobile Menu ─── */
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      z-index: 199;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 20px; font-weight: 600; color: var(--charcoal);
+      text-decoration: none; padding: 14px 0;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--blue); }
+    .mobile-menu .mobile-cta {
+      margin-top: 16px;
+      background: var(--blue); color: var(--white);
+      padding: 16px 36px; border-radius: 10px;
+      font-size: 17px; font-weight: 800;
+      text-align: center; width: 100%; max-width: 320px;
+    }
+    .mobile-menu .mobile-phone {
+      font-size: 22px; font-weight: 800; color: var(--blue);
+      margin-top: 8px;
+    }
 
     /* ─── Hero ─── */
     #hero {
@@ -460,29 +497,55 @@
       nav.compact { padding: 10px 20px; }
       .nav-links, .nav-cta, .nav-phone { display: none; }
       .hamburger { display: flex; }
-      .hero-text { padding: 110px 20px 40px; }
-      .hero-img-col { height: 280px; }
-      #agent-intro { padding: 32px 20px; }
-      .agent-intro-inner { flex-direction: column; text-align: center; }
-      #phone-banner { padding: 12px 20px; gap: 12px; }
-      #trust { padding: 20px 20px; }
+      .hero-text { padding: 100px 20px 36px; }
+      .hero-title { font-size: clamp(28px, 7vw, 40px); letter-spacing: -1.5px; }
+      .hero-sub { font-size: 16px; margin-bottom: 28px; }
+      .hero-img-col { height: 260px; }
+      #agent-intro { padding: 28px 20px; }
+      .agent-intro-inner { flex-direction: column; text-align: center; gap: 16px; }
+      .agent-photo { width: 64px; height: 64px; }
+      .agent-name { font-size: 18px; }
+      .agent-bio { font-size: 13px; }
+      #phone-banner { padding: 12px 16px; gap: 10px; }
+      .phone-banner-text { font-size: 13px; }
+      .phone-banner-num { font-size: 16px; }
+      #trust { padding: 18px 16px; }
       .trust-divider { display: none; }
-      .trust-inner { justify-content: center; }
-      #products, #how, #cta-final, #reviews { padding-left: 20px; padding-right: 20px; }
-      #social-proof { padding: 28px 20px; }
-      .social-proof-inner { gap: 28px; }
+      .trust-inner { justify-content: center; gap: 14px; }
+      .trust-item { gap: 8px; }
+      .trust-text strong { font-size: 12px; }
+      .trust-text span { font-size: 11px; }
+      #products, #how, #cta-final, #reviews { padding-left: 16px; padding-right: 16px; }
+      .section-title { font-size: clamp(24px, 6vw, 34px); }
+      .section-sub { font-size: 15px; }
+      #social-proof { padding: 24px 16px; }
+      .social-proof-inner { gap: 20px; }
+      .proof-stat-num { font-size: 26px; }
+      .proof-stat-label { font-size: 12px; }
       .proof-divider { display: none; }
-      footer { padding-left: 20px; padding-right: 20px; }
+      footer { padding-left: 16px; padding-right: 16px; }
       .how-steps { grid-template-columns: 1fr; }
       .footer-top { flex-direction: column; }
       .footer-disc { text-align: left; }
-      #seniors-banner { padding: 32px 20px; }
+      #seniors-banner { padding: 28px 16px; }
+      .seniors-banner-title { font-size: 19px; }
+      .seniors-banner-sub { font-size: 14px; }
+      .product-card { padding: 28px 22px; }
+      .product-name { font-size: 20px; }
+      .cta-final-title { font-size: clamp(24px, 6vw, 36px); }
+      .cta-final-phone { font-size: 20px; }
     }
     @media (max-width: 480px) {
       .hero-actions { flex-direction: column; width: 100%; }
-      .btn-blue, .btn-outline { justify-content: center; width: 100%; }
+      .btn-blue { padding: 18px 24px; font-size: 16px; justify-content: center; width: 100%; }
+      .btn-outline { padding: 16px 24px; font-size: 14px; justify-content: center; width: 100%; }
       .cta-final-actions { flex-direction: column; width: 100%; }
+      .cta-final-actions .btn-blue { width: 100%; }
+      .cta-final-actions .btn-outline { width: 100%; }
       .phone-banner-divider { display: none; }
+      .phone-banner-cta { padding: 6px 12px; font-size: 12px; }
+      .hero-trust-badge span { font-size: 11px; }
+      .btn-charcoal { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -511,6 +574,17 @@
     <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="nav-cta">Free Consultation</a>
     <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </nav>
+
+  <!-- ─── Mobile Menu ─── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#products" onclick="closeMenu()">Coverage</a>
+    <a href="#carriers" onclick="closeMenu()">Carriers</a>
+    <a href="#reviews" onclick="closeMenu()">Reviews</a>
+    <a href="#how" onclick="closeMenu()">How It Works</a>
+    <a href="seniorsinsurance.html">Senior Plans</a>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="mobile-cta">Book Free Consultation</a>
+    <a href="tel:8136948818" class="mobile-phone">813-694-8818</a>
+  </div>
 
   <!-- ─── Hero ─── -->
   <section id="hero">
@@ -793,11 +867,50 @@
       track.innerHTML = html;
     }
     buildCarousel();
+
+    // Nav compact on scroll
     var navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() { navbar.classList.toggle('compact', window.scrollY > 50); }, { passive: true });
-    var observer = new IntersectionObserver(function(entries) { entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.08 });
+    window.addEventListener('scroll', function() {
+      navbar.classList.toggle('compact', window.scrollY > 50);
+    }, { passive: true });
+
+    // Hamburger menu
+    var hamburger = document.getElementById('hamburger');
+    var mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Scroll reveal
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
-    document.querySelectorAll('a[href^="#"]').forEach(function(a) { a.addEventListener('click', function(e) { var target = document.querySelector(a.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   </script>
 </body>
 </html>

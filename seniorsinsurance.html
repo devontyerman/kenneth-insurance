@@ -396,21 +396,50 @@
     .footer-disc { font-size: 11px; color: rgba(255,255,255,0.08); max-width: 500px; margin: 0 auto; line-height: 1.6; }
 
     /* ─── Responsive ─── */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .sticky-top { padding: 10px 16px; gap: 10px; }
       .sticky-top-text { font-size: 13px; }
       .sticky-top-phone { display: none; }
-      #hero { padding: 90px 16px 48px; }
-      .hero-title { font-size: 32px; }
-      .hero-sub { font-size: 17px; }
+      #hero { padding: 80px 16px 0; }
+      .hero-inner { padding-bottom: 36px; }
+      .hero-badge span { font-size: 13px; }
+      .hero-title { font-size: clamp(28px, 7vw, 40px); letter-spacing: -1.5px; }
+      .hero-sub { font-size: 17px; margin-bottom: 28px; }
       .hero-cta { padding: 18px 32px; font-size: 17px; width: 100%; justify-content: center; }
-      .hero-micro { gap: 12px; }
+      .hero-phone { font-size: 22px; }
+      .hero-micro { gap: 10px; font-size: 13px; }
+      .hero-micro-item { gap: 4px; }
+      .hero-image { max-height: 280px; }
       .trust-numbers-inner { gap: 20px; }
+      .tn-num { font-size: 28px; }
+      .tn-label { font-size: 12px; }
       .tn-divider { display: none; }
       #benefits, #steps, #reviews, #faq, #final-cta, #agent { padding-left: 16px; padding-right: 16px; }
-      .benefits-list li { font-size: 16px; padding: 14px 16px; }
-      .step-card { flex-direction: column; gap: 12px; }
+      .benefits-title, .steps-title, .reviews-title, .faq-title { font-size: clamp(24px, 6vw, 34px); }
+      .benefits-sub, .reviews-sub { font-size: 16px; }
+      .benefits-list li { font-size: 16px; padding: 14px 16px; gap: 12px; }
+      .benefit-check { width: 24px; height: 24px; }
+      .step-card { flex-direction: column; gap: 12px; padding: 22px 20px; }
+      .step-title { font-size: 18px; }
+      .step-text { font-size: 15px; }
+      .review-text { font-size: 16px; }
+      .faq-question { font-size: 16px; padding: 18px 20px; }
+      .faq-answer-inner { font-size: 15px; padding: 0 20px 18px; }
+      .agent-photo { width: 80px; height: 80px; }
+      .agent-name { font-size: 22px; }
+      .agent-bio { font-size: 15px; }
+      .final-cta-title { font-size: clamp(24px, 6vw, 38px); }
+      .final-cta-sub { font-size: 16px; }
       .final-cta-btn { width: 100%; justify-content: center; font-size: 17px; padding: 18px 32px; }
+      .final-cta-phone { font-size: 20px; }
+      footer { padding: 24px 16px 20px; }
+    }
+    @media (max-width: 380px) {
+      .hero-title { font-size: 26px; }
+      .hero-sub { font-size: 15px; }
+      .hero-cta { padding: 16px 24px; font-size: 16px; }
+      .benefits-list li { font-size: 15px; padding: 12px 14px; }
+      .hero-micro { flex-direction: column; gap: 6px; }
     }
   </style>
 </head>
