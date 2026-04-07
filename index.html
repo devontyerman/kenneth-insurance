@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenneth Insurance — Final Expense Insurance for Seniors</title>
+  <title>Kenneth Insurance — Life Insurance Made Simple</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -54,39 +54,25 @@
       box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-shield {
-      width: 32px; height: 32px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
+    .logo-shield { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .logo-text { font-size: 15px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.3px; }
 
     .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a {
-      color: var(--muted); text-decoration: none;
-      font-size: 14px; font-weight: 400; transition: color 0.2s;
-    }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; }
     .nav-links a:hover { color: var(--charcoal); }
 
-    .nav-phone {
-      font-size: 14px; font-weight: 600; color: var(--blue);
-      text-decoration: none; transition: color 0.2s;
-    }
+    .nav-phone { font-size: 14px; font-weight: 600; color: var(--blue); text-decoration: none; transition: color 0.2s; }
     .nav-phone:hover { color: var(--blue-dark); }
 
     .nav-cta {
       background: var(--blue); color: var(--white);
       border: none; padding: 10px 20px; border-radius: 7px;
       font-size: 14px; font-weight: 600; font-family: var(--font);
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s;
+      cursor: pointer; text-decoration: none; transition: background 0.2s;
     }
     .nav-cta:hover { background: var(--blue-dark); }
 
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      cursor: pointer; padding: 4px;
-    }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--charcoal); border-radius: 2px; }
 
     /* ─── Hero ─── */
@@ -99,110 +85,50 @@
       padding-top: 72px;
       overflow: hidden;
     }
-
-    .hero-text {
-      padding: 60px 40px 60px 64px;
-    }
+    .hero-text { padding: 60px 40px 60px 64px; }
 
     .hero-trust-badge {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-mid);
-      border-radius: 100px;
-      padding: 6px 16px 6px 8px;
+      background: var(--blue-light); border: 1px solid var(--blue-mid);
+      border-radius: 100px; padding: 6px 16px 6px 8px;
       margin-bottom: 24px;
       opacity: 0; animation: fadeUp 0.5s 0.05s ease forwards;
     }
     .hero-trust-badge-icon {
-      width: 24px; height: 24px; border-radius: 50%;
-      background: var(--blue);
+      width: 24px; height: 24px; border-radius: 50%; background: var(--blue);
       display: flex; align-items: center; justify-content: center;
     }
-    .hero-trust-badge span {
-      font-size: 12px; font-weight: 600; color: var(--blue);
-    }
-
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--blue);
-      margin-bottom: 24px;
-      opacity: 0; animation: fadeUp 0.5s 0.1s ease forwards;
-    }
-    .hero-tag::before {
-      content: ''; width: 5px; height: 5px;
-      border-radius: 50%; background: var(--blue);
-    }
+    .hero-trust-badge span { font-size: 12px; font-weight: 600; color: var(--blue); }
 
     .hero-title {
       font-size: clamp(34px, 4.5vw, 52px);
       font-weight: 500; color: var(--charcoal);
-      line-height: 1.1; letter-spacing: -2px;
-      margin-bottom: 20px;
+      line-height: 1.1; letter-spacing: -2px; margin-bottom: 20px;
       opacity: 0; animation: fadeUp 0.6s 0.2s ease forwards;
     }
     .hero-title em { font-style: normal; color: var(--blue); }
 
     .hero-sub {
-      font-size: 17px;
-      color: var(--muted); line-height: 1.7; max-width: 440px;
-      margin-bottom: 36px; font-weight: 400;
+      font-size: 17px; color: var(--muted); line-height: 1.7;
+      max-width: 440px; margin-bottom: 36px; font-weight: 400;
       opacity: 0; animation: fadeUp 0.6s 0.35s ease forwards;
     }
 
     .hero-actions {
-      display: flex; align-items: center;
-      gap: 12px; flex-wrap: wrap;
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
       opacity: 0; animation: fadeUp 0.6s 0.48s ease forwards;
     }
 
-    .hero-img-col {
-      position: relative;
-      height: 100%;
-      overflow: hidden;
-    }
+    .hero-img-col { position: relative; height: 100%; overflow: hidden; }
     .hero-img-col img {
       width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
+      object-fit: cover; object-position: center 40%;
       opacity: 0; animation: fadeUp 0.8s 0.2s ease forwards;
     }
     .hero-img-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(to right, var(--white) 0%, transparent 15%);
       pointer-events: none;
-    }
-
-    /* ─── Agent Intro Section ─── */
-    #agent-intro {
-      background: var(--bg);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 48px 40px;
-    }
-    .agent-intro-inner {
-      max-width: 760px; margin: 0 auto;
-      display: flex; align-items: center; gap: 24px;
-    }
-    .agent-photo {
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 15%;
-      border: 3px solid var(--blue-mid);
-      flex-shrink: 0;
-    }
-    .agent-content { }
-    .agent-name {
-      font-size: 20px; font-weight: 700; color: var(--charcoal);
-      letter-spacing: -0.3px;
-    }
-    .agent-role {
-      font-size: 13px; color: var(--blue); font-weight: 500;
-      margin-top: 2px; margin-bottom: 8px;
-    }
-    .agent-bio {
-      font-size: 14px; color: var(--muted); line-height: 1.7;
-      max-width: 520px;
     }
 
     /* ─── Buttons ─── */
@@ -217,46 +143,53 @@
       box-shadow: 0 4px 16px rgba(37,99,235,0.3);
     }
     .btn-blue:hover {
-      background: var(--blue-dark);
-      transform: translateY(-2px);
+      background: var(--blue-dark); transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(37,99,235,0.4);
     }
-
     .btn-outline {
       color: var(--charcoal); text-decoration: none;
       font-size: 15px; font-weight: 600;
       display: inline-flex; align-items: center; gap: 8px;
       border: 2px solid var(--border-2);
       padding: 18px 28px; border-radius: 10px;
-      transition: border-color 0.2s, color 0.2s;
-      white-space: nowrap;
+      transition: border-color 0.2s, color 0.2s; white-space: nowrap;
     }
     .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
 
+    /* ─── Agent Intro ─── */
+    #agent-intro {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 40px;
+    }
+    .agent-intro-inner {
+      max-width: 760px; margin: 0 auto;
+      display: flex; align-items: center; gap: 24px;
+    }
+    .agent-photo {
+      width: 80px; height: 80px; border-radius: 50%;
+      object-fit: cover; object-position: center 15%;
+      border: 3px solid var(--blue-mid); flex-shrink: 0;
+    }
+    .agent-name { font-size: 20px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.3px; }
+    .agent-role { font-size: 13px; color: var(--blue); font-weight: 500; margin-top: 2px; margin-bottom: 8px; }
+    .agent-bio { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 520px; }
+
     /* ─── Phone Banner ─── */
     #phone-banner {
-      background: var(--blue);
-      padding: 14px 40px;
+      background: var(--blue); padding: 14px 40px;
       display: flex; align-items: center; justify-content: center;
       gap: 20px; flex-wrap: wrap;
     }
-    .phone-banner-text {
-      font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 400;
-    }
-    .phone-banner-num {
-      font-size: 18px; font-weight: 800; color: var(--white);
-      text-decoration: none; letter-spacing: -0.5px;
-      transition: opacity 0.2s;
-    }
+    .phone-banner-text { font-size: 14px; color: rgba(255,255,255,0.8); }
+    .phone-banner-num { font-size: 18px; font-weight: 800; color: var(--white); text-decoration: none; transition: opacity 0.2s; }
     .phone-banner-num:hover { opacity: 0.85; }
-    .phone-banner-divider {
-      width: 1px; height: 20px; background: rgba(255,255,255,0.25);
-    }
+    .phone-banner-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.25); }
     .phone-banner-cta {
       background: var(--white); color: var(--blue);
       font-size: 13px; font-weight: 700; text-decoration: none;
-      padding: 8px 16px; border-radius: 6px;
-      transition: opacity 0.2s;
+      padding: 8px 16px; border-radius: 6px; transition: opacity 0.2s;
     }
     .phone-banner-cta:hover { opacity: 0.9; }
 
@@ -275,255 +208,153 @@
     .trust-item { display: flex; align-items: center; gap: 10px; }
     .trust-icon {
       width: 36px; height: 36px; border-radius: 8px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
+      background: var(--white); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .trust-text strong {
-      display: block; font-size: 13px; font-weight: 600;
-      color: var(--charcoal);
-    }
+    .trust-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--charcoal); }
     .trust-text span { font-size: 12px; color: var(--muted); }
     .trust-divider { width: 1px; height: 28px; background: var(--border); }
 
     /* ─── Section Shared ─── */
     .section-inner { max-width: 960px; margin: 0 auto; }
-
     .section-label {
       display: inline-flex; align-items: center; gap: 7px;
       font-size: 10px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--blue);
-      margin-bottom: 12px;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 12px;
     }
-    .section-label::before {
-      content: ''; width: 5px; height: 5px;
-      border-radius: 50%; background: var(--blue);
-    }
-
+    .section-label::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
     .section-title {
       font-size: clamp(26px, 3.5vw, 42px);
       font-weight: 500; color: var(--charcoal);
       line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 12px;
     }
-    .section-sub {
-      font-size: 16px; color: var(--muted);
-      line-height: 1.7; max-width: 520px; font-weight: 400;
-    }
+    .section-sub { font-size: 16px; color: var(--muted); line-height: 1.7; max-width: 520px; }
 
-    /* ─── Why Final Expense ─── */
-    #why {
-      background: var(--white);
-      padding: 80px 40px;
-    }
-    .why-header { text-align: center; margin-bottom: 48px; }
-    .why-header .section-label { justify-content: center; }
-    .why-header .section-sub { margin: 0 auto; }
+    /* ─── Products ─── */
+    #products { background: var(--white); padding: 80px 40px; }
+    .products-header { text-align: center; margin-bottom: 48px; }
+    .products-header .section-label { justify-content: center; }
+    .products-header .section-sub { margin: 0 auto; }
 
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 960px;
-      margin: 0 auto;
+    .products-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; max-width: 960px; margin: 0 auto;
     }
-    .why-card {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px 28px;
+    .product-card {
+      background: var(--bg); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 36px 28px;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
     }
-    .why-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: var(--blue-light);
+    .product-card:hover {
+      border-color: var(--blue-mid);
+      box-shadow: 0 12px 40px rgba(37,99,235,0.08);
+      transform: translateY(-3px);
+    }
+    .product-card.featured {
+      background: var(--blue); border-color: var(--blue);
+    }
+    .product-card.featured:hover {
+      border-color: var(--blue-dark);
+      box-shadow: 0 16px 48px rgba(37,99,235,0.4);
+    }
+    .product-tag {
+      display: inline-block; font-size: 9px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--blue); background: var(--blue-light);
       border: 1px solid var(--blue-mid);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 18px;
+      border-radius: 100px; padding: 4px 12px; margin-bottom: 20px;
     }
-    .why-card h3 {
-      font-size: 17px; font-weight: 600; color: var(--charcoal);
-      letter-spacing: -0.3px; margin-bottom: 8px;
+    .product-badge {
+      display: inline-block; font-size: 9px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--white); background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 100px; padding: 4px 12px; margin-bottom: 20px;
     }
-    .why-card p {
-      font-size: 14px; color: var(--muted); line-height: 1.7;
+    .product-name { font-size: 24px; font-weight: 600; letter-spacing: -0.8px; margin-bottom: 6px; }
+    .product-card:not(.featured) .product-name { color: var(--charcoal); }
+    .product-card.featured .product-name { color: var(--white); }
+    .product-desc { font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+    .product-card:not(.featured) .product-desc { color: var(--muted); }
+    .product-card.featured .product-desc { color: rgba(255,255,255,0.65); }
+    .product-divider { height: 1px; margin-bottom: 24px; }
+    .product-card:not(.featured) .product-divider { background: var(--border); }
+    .product-card.featured .product-divider { background: rgba(255,255,255,0.15); }
+    .product-points { list-style: none; display: flex; flex-direction: column; gap: 11px; margin-bottom: 28px; }
+    .product-points li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; }
+    .product-card:not(.featured) .product-points li { color: var(--muted); }
+    .product-card.featured .product-points li { color: rgba(255,255,255,0.75); }
+    .product-check {
+      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+      margin-top: 1px; display: flex; align-items: center; justify-content: center;
     }
+    .product-card:not(.featured) .product-check { background: var(--white); border: 1px solid var(--border-2); }
+    .product-card.featured .product-check { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); }
+    .btn-product {
+      display: block; text-align: center; text-decoration: none;
+      padding: 14px 24px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; font-family: var(--font); transition: all 0.2s;
+    }
+    .btn-product:hover { transform: translateY(-1px); }
+    .btn-product-light { background: var(--white); color: var(--charcoal); border: 1.5px solid var(--border-2); }
+    .btn-product-light:hover { border-color: var(--blue); color: var(--blue); }
+    .btn-product-white { background: var(--white); color: var(--blue); border: none; box-shadow: 0 2px 12px rgba(0,0,0,0.12); }
 
     /* ─── Reviews ─── */
-    #reviews {
-      background: var(--bg);
-      padding: 80px 40px;
-      border-top: 1px solid var(--border);
-    }
+    #reviews { background: var(--bg); padding: 80px 40px; border-top: 1px solid var(--border); }
     .reviews-header { text-align: center; margin-bottom: 48px; }
     .reviews-header .section-label { justify-content: center; }
     .reviews-header .section-sub { margin: 0 auto; }
-
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    .review-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px 28px;
-    }
-    .review-stars {
-      display: flex; gap: 3px; margin-bottom: 16px;
-    }
-    .review-text {
-      font-size: 14px; color: var(--text); line-height: 1.7;
-      margin-bottom: 20px; font-style: italic;
-    }
-    .review-author {
-      display: flex; align-items: center; gap: 12px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-    }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 960px; margin: 0 auto; }
+    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; }
+    .review-stars { display: flex; gap: 3px; margin-bottom: 16px; }
+    .review-text { font-size: 14px; color: var(--text); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border); }
     .review-avatar {
       width: 40px; height: 40px; border-radius: 50%;
-      background: var(--blue-light);
-      border: 1px solid var(--blue-mid);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; font-weight: 700; color: var(--blue);
-      flex-shrink: 0;
-    }
-    .review-name {
-      font-size: 14px; font-weight: 600; color: var(--charcoal);
-    }
-    .review-detail {
-      font-size: 12px; color: var(--muted); margin-top: 1px;
-    }
-
-    /* ─── Social Proof Bar ─── */
-    #social-proof {
-      background: var(--white);
-      padding: 40px 40px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .social-proof-inner {
-      max-width: 800px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: center;
-      gap: 48px; flex-wrap: wrap;
-    }
-    .proof-stat { text-align: center; }
-    .proof-stat-num {
-      font-size: 32px; font-weight: 800; color: var(--charcoal);
-      letter-spacing: -1px; line-height: 1;
-    }
-    .proof-stat-label {
-      font-size: 13px; color: var(--muted); margin-top: 4px;
-    }
-    .proof-divider {
-      width: 1px; height: 40px; background: var(--border);
-    }
-
-    /* ─── Coverage Details ─── */
-    #coverage {
-      background: var(--bg);
-      padding: 80px 40px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .coverage-inner {
-      max-width: 760px; margin: 0 auto;
-      text-align: center;
-    }
-    .coverage-inner .section-label { justify-content: center; }
-    .coverage-inner .section-sub { margin: 0 auto 40px; }
-
-    .coverage-list {
-      list-style: none;
-      display: grid; gap: 12px;
-      max-width: 480px; margin: 0 auto 40px;
-      text-align: left;
-    }
-    .coverage-list li {
-      display: flex; align-items: flex-start; gap: 12px;
-      font-size: 15px; color: var(--text); line-height: 1.6;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 18px;
-    }
-    .check-icon {
-      width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
-      margin-top: 1px; display: flex; align-items: center; justify-content: center;
       background: var(--blue-light); border: 1px solid var(--blue-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; color: var(--blue); flex-shrink: 0;
     }
+    .review-name { font-size: 14px; font-weight: 600; color: var(--charcoal); }
+    .review-detail { font-size: 12px; color: var(--muted); margin-top: 1px; }
+
+    /* ─── Social Proof ─── */
+    #social-proof { background: var(--white); padding: 40px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .social-proof-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .proof-stat { text-align: center; }
+    .proof-stat-num { font-size: 32px; font-weight: 800; color: var(--charcoal); letter-spacing: -1px; }
+    .proof-stat-label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    .proof-divider { width: 1px; height: 40px; background: var(--border); }
 
     /* ─── Carriers ─── */
-    #carriers {
-      background: var(--charcoal-deep);
-      padding: 70px 0 60px;
-      overflow: hidden;
-    }
-    .carriers-header {
-      text-align: center;
-      padding: 0 40px;
-      margin-bottom: 40px;
-    }
+    #carriers { background: var(--charcoal-deep); padding: 70px 0 60px; overflow: hidden; }
+    .carriers-header { text-align: center; padding: 0 40px; margin-bottom: 40px; }
     .carriers-header .section-label { color: rgba(255,255,255,0.35); }
     .carriers-header .section-label::before { background: var(--blue); }
     .carriers-header .section-title { color: var(--white); }
-    .carriers-header .section-sub {
-      color: rgba(255,255,255,0.4); margin: 0 auto;
-      text-align: center;
-    }
-
+    .carriers-header .section-sub { color: rgba(255,255,255,0.4); margin: 0 auto; text-align: center; }
     .carousel-wrapper {
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
       mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
     }
-    .carousel-track {
-      display: flex;
-      gap: 14px;
-      width: max-content;
-      animation: scrollCarousel 55s linear infinite;
-    }
-    .carousel-wrapper:hover .carousel-track {
-      animation-play-state: paused;
-    }
-    @keyframes scrollCarousel {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
+    .carousel-track { display: flex; gap: 14px; width: max-content; animation: scrollCarousel 55s linear infinite; }
+    .carousel-wrapper:hover .carousel-track { animation-play-state: paused; }
+    @keyframes scrollCarousel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .carrier-chip {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.09);
-      border-radius: 8px;
-      padding: 12px 18px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background 0.2s;
-      cursor: default;
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 8px; padding: 12px 18px; white-space: nowrap;
+      flex-shrink: 0; transition: background 0.2s; cursor: default;
     }
-    .carrier-chip:hover {
-      background: rgba(37,99,235,0.12);
-    }
-    .carrier-name {
-      font-size: 13px; font-weight: 600;
-      color: rgba(255,255,255,0.7);
-    }
+    .carrier-chip:hover { background: rgba(37,99,235,0.12); }
+    .carrier-name { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7); }
 
     /* ─── How It Works ─── */
-    #how {
-      background: var(--white);
-      padding: 80px 40px;
-    }
+    #how { background: var(--white); padding: 80px 40px; }
     .how-header { text-align: center; margin-bottom: 48px; }
     .how-header .section-label { justify-content: center; }
-
     .how-steps {
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 2px; background: var(--border);
@@ -531,61 +362,35 @@
       max-width: 960px; margin: 0 auto;
     }
     .how-step { background: var(--white); padding: 36px 28px; }
-    .how-step-num {
-      font-size: 42px; font-weight: 300; color: var(--blue-mid);
-      letter-spacing: -2px; line-height: 1; margin-bottom: 16px;
-    }
-    .how-step-title {
-      font-size: 17px; font-weight: 600; color: var(--charcoal);
-      margin-bottom: 8px;
-    }
+    .how-step-num { font-size: 42px; font-weight: 300; color: var(--blue-mid); letter-spacing: -2px; margin-bottom: 16px; }
+    .how-step-title { font-size: 17px; font-weight: 600; color: var(--charcoal); margin-bottom: 8px; }
     .how-step-text { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-    /* ─── FAQ ─── */
-    #faq {
-      background: var(--bg);
-      padding: 80px 40px;
-      border-top: 1px solid var(--border);
+    /* ─── Seniors Banner ─── */
+    #seniors-banner {
+      background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-mid) 100%);
+      border-top: 1px solid var(--blue-mid);
+      border-bottom: 1px solid var(--blue-mid);
+      padding: 40px;
+      text-align: center;
     }
-    .faq-header { text-align: center; margin-bottom: 48px; }
-    .faq-header .section-label { justify-content: center; }
-
-    .faq-list {
-      max-width: 680px; margin: 0 auto;
-      display: flex; flex-direction: column; gap: 12px;
+    .seniors-banner-inner { max-width: 600px; margin: 0 auto; }
+    .seniors-banner-title {
+      font-size: 22px; font-weight: 700; color: var(--charcoal);
+      letter-spacing: -0.5px; margin-bottom: 8px;
     }
-    .faq-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
+    .seniors-banner-sub {
+      font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 20px;
     }
-    .faq-question {
-      width: 100%; padding: 20px 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px;
-      background: none; border: none; cursor: pointer;
-      font-family: var(--font);
-      font-size: 15px; font-weight: 600; color: var(--charcoal);
-      text-align: left;
+    .btn-charcoal {
+      background: var(--charcoal); color: var(--white);
+      border: none; padding: 16px 30px; border-radius: 9px;
+      font-size: 15px; font-weight: 700; font-family: var(--font);
+      cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.2s, transform 0.15s;
     }
-    .faq-question:hover { color: var(--blue); }
-    .faq-chevron {
-      width: 20px; height: 20px; flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-answer {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.35s ease;
-    }
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-    }
-    .faq-answer-inner {
-      padding: 0 24px 20px;
-      font-size: 14px; color: var(--muted); line-height: 1.7;
-    }
+    .btn-charcoal:hover { background: var(--charcoal-deep); transform: translateY(-1px); }
 
     /* ─── CTA Final ─── */
     #cta-final {
@@ -594,100 +399,49 @@
       position: relative; overflow: hidden;
     }
     #cta-final::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 60%);
       pointer-events: none;
     }
-    .cta-final-inner {
-      max-width: 560px; margin: 0 auto;
-      position: relative; z-index: 1;
-    }
+    .cta-final-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
     .cta-final-inner .section-label { color: rgba(255,255,255,0.3); justify-content: center; }
-
     .cta-final-title {
       font-size: clamp(28px, 4vw, 44px);
       font-weight: 500; color: var(--white);
       letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 14px;
     }
     .cta-final-title em { font-style: normal; color: var(--blue); }
-
-    .cta-final-sub {
-      font-size: 16px; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 12px;
-    }
-
+    .cta-final-sub { font-size: 16px; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 12px; }
     .cta-final-phone {
       font-size: 24px; font-weight: 800; color: var(--white);
-      text-decoration: none; letter-spacing: -0.5px;
-      display: inline-block; margin-bottom: 32px;
-      transition: color 0.2s;
+      text-decoration: none; display: inline-block; margin-bottom: 32px; transition: color 0.2s;
     }
     .cta-final-phone:hover { color: var(--blue); }
-
-    .cta-final-actions {
-      display: flex; align-items: center; justify-content: center;
-      gap: 12px; flex-wrap: wrap;
-    }
-    .cta-final-actions .btn-outline {
-      color: rgba(255,255,255,0.5);
-      border-color: rgba(255,255,255,0.15);
-    }
-    .cta-final-actions .btn-outline:hover {
-      color: var(--white);
-      border-color: rgba(255,255,255,0.4);
-    }
+    .cta-final-actions { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .cta-final-actions .btn-outline { color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.15); }
+    .cta-final-actions .btn-outline:hover { color: var(--white); border-color: rgba(255,255,255,0.4); }
 
     /* ─── Footer ─── */
-    footer {
-      background: #0B0F18;
-      padding: 40px 40px 28px;
-    }
+    footer { background: #0B0F18; padding: 40px 40px 28px; }
     .footer-inner { max-width: 960px; margin: 0 auto; }
     .footer-top {
-      display: flex; justify-content: space-between;
-      align-items: flex-start; padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; justify-content: space-between; align-items: flex-start;
+      padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.06);
       flex-wrap: wrap; gap: 28px;
     }
-    .footer-tagline {
-      font-size: 13px; color: rgba(255,255,255,0.2);
-      margin-top: 8px; max-width: 220px; line-height: 1.7;
-    }
-    .footer-contact h4 {
-      font-size: 10px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 12px;
-    }
-    .footer-contact a {
-      display: block; color: rgba(255,255,255,0.4); text-decoration: none;
-      font-size: 14px; margin-bottom: 8px; transition: color 0.2s;
-    }
+    .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.2); margin-top: 8px; max-width: 220px; line-height: 1.7; }
+    .footer-contact h4 { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 12px; }
+    .footer-contact a { display: block; color: rgba(255,255,255,0.4); text-decoration: none; font-size: 14px; margin-bottom: 8px; transition: color 0.2s; }
     .footer-contact a:hover { color: rgba(255,255,255,0.85); }
-    .footer-contact .footer-phone-large {
-      font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.6);
-      letter-spacing: -0.5px; margin-bottom: 10px;
-    }
+    .footer-contact .footer-phone-large { font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
     .footer-contact .footer-phone-large:hover { color: var(--white); }
-    .footer-bottom {
-      padding-top: 20px; display: flex;
-      justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px;
-    }
+    .footer-bottom { padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .footer-copy { font-size: 12px; color: rgba(255,255,255,0.13); }
-    .footer-disc {
-      font-size: 11px; color: rgba(255,255,255,0.1);
-      max-width: 480px; line-height: 1.6; text-align: right;
-    }
+    .footer-disc { font-size: 11px; color: rgba(255,255,255,0.1); max-width: 480px; line-height: 1.6; text-align: right; }
 
     /* ─── Animations ─── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .reveal {
-      opacity: 0; transform: translateY(16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
     /* ─── Responsive ─── */
@@ -698,9 +452,9 @@
       .hero-actions { justify-content: center; }
       .hero-trust-badge { margin-left: auto; margin-right: auto; }
       .hero-img-col { height: 340px; }
+      .products-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
       .reviews-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
     }
-
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       nav.compact { padding: 10px 20px; }
@@ -714,8 +468,7 @@
       #trust { padding: 20px 20px; }
       .trust-divider { display: none; }
       .trust-inner { justify-content: center; }
-      .why-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-      #why, #coverage, #how, #cta-final, #reviews, #faq { padding-left: 20px; padding-right: 20px; }
+      #products, #how, #cta-final, #reviews { padding-left: 20px; padding-right: 20px; }
       #social-proof { padding: 28px 20px; }
       .social-proof-inner { gap: 28px; }
       .proof-divider { display: none; }
@@ -723,8 +476,8 @@
       .how-steps { grid-template-columns: 1fr; }
       .footer-top { flex-direction: column; }
       .footer-disc { text-align: left; }
+      #seniors-banner { padding: 32px 20px; }
     }
-
     @media (max-width: 480px) {
       .hero-actions { flex-direction: column; width: 100%; }
       .btn-blue, .btn-outline { justify-content: center; width: 100%; }
@@ -748,16 +501,15 @@
       <span class="logo-text">Kenneth Insurance</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#why">Why Final Expense</a></li>
-      <li><a href="#coverage">Coverage</a></li>
+      <li><a href="#products">Coverage</a></li>
+      <li><a href="#carriers">Carriers</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#how">How It Works</a></li>
+      <li><a href="seniorsinsurance.html">Senior Plans</a></li>
     </ul>
     <a href="tel:8136948818" class="nav-phone">813-694-8818</a>
     <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="nav-cta">Free Consultation</a>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </nav>
 
   <!-- ─── Hero ─── -->
@@ -770,10 +522,10 @@
         <span>Trusted by 1,000+ Families</span>
       </div>
       <h1 class="hero-title">
-        Peace of mind for<br>you and your <em>family.</em>
+        Protection that<br>fits your <em>life.</em>
       </h1>
       <p class="hero-sub">
-        Affordable final expense coverage designed for seniors. No medical exams, no hassle &mdash; just simple protection so your loved ones are never left with the burden.
+        No jargon. No pressure. Just a straight conversation about the right life insurance for you and your family &mdash; at the best rate available.
       </p>
       <div class="hero-actions">
         <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="btn-blue">
@@ -787,7 +539,7 @@
       </div>
     </div>
     <div class="hero-img-col">
-      <img src="richard-sagredo-IzIERuIwJWo-unsplash.jpg" alt="Happy senior couple" />
+      <img src="hana-el-zohiry-HV2My97JHA0-unsplash.jpg" alt="Family" />
       <div class="hero-img-overlay"></div>
     </div>
   </section>
@@ -799,7 +551,7 @@
       <div class="agent-content">
         <div class="agent-name">Devon</div>
         <div class="agent-role">Licensed Insurance Agent &middot; Kenneth Insurance</div>
-        <p class="agent-bio">I help seniors find affordable final expense coverage &mdash; no pressure, no jargon. As an independent agent, I shop every carrier to get you the best rate in one simple call.</p>
+        <p class="agent-bio">I work with individuals and families to find the right life insurance &mdash; without the confusion or hard sell. As an independent agent, I compare rates from every top carrier to find the best fit for your needs and budget.</p>
       </div>
     </div>
   </div>
@@ -816,75 +568,75 @@
   <div id="trust">
     <div class="trust-inner">
       <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="trust-text">
-          <strong>Licensed Agent</strong>
-          <span>Independent &amp; trusted</span>
-        </div>
+        <div class="trust-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="trust-text"><strong>Licensed Agent</strong><span>Independent &amp; trusted</span></div>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="trust-text">
-          <strong>No Medical Exam</strong>
-          <span>Simple application</span>
-        </div>
+        <div class="trust-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="trust-text"><strong>Free Consultations</strong><span>No cost, no obligation</span></div>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <div class="trust-text">
-          <strong>Best Rate Guaranteed</strong>
-          <span>I shop every carrier</span>
-        </div>
+        <div class="trust-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="trust-text"><strong>Best Rate Guaranteed</strong><span>I shop every carrier</span></div>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <div class="trust-text">
-          <strong>Seniors Welcome</strong>
-          <span>Ages 50&ndash;85 accepted</span>
-        </div>
+        <div class="trust-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="trust-text"><strong>Personalized Advice</strong><span>Coverage built around you</span></div>
       </div>
     </div>
   </div>
 
-  <!-- ─── Why Final Expense ─── -->
-  <section id="why">
-    <div class="why-header reveal">
-      <div class="section-label">Why Final Expense Insurance</div>
-      <h2 class="section-title">Protect your family from<br>unexpected costs.</h2>
-      <p class="section-sub">The average funeral costs over $7,000. Final expense insurance makes sure your family never has to worry about covering those costs.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3>Affordable Premiums</h3>
-        <p>Coverage typically costs $30&ndash;$70/month. Premiums are locked in and never increase, no matter your age.</p>
+  <!-- ─── Products ─── -->
+  <section id="products">
+    <div class="section-inner">
+      <div class="products-header reveal">
+        <div class="section-label">Coverage Options</div>
+        <h2 class="section-title">The right coverage for<br>every stage of life.</h2>
+        <p class="section-sub">Not sure which is right for you? That's exactly what the consultation is for &mdash; here's the quick version.</p>
       </div>
-      <div class="why-card reveal">
-        <div class="why-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="products-grid">
+        <div class="product-card reveal">
+          <div class="product-tag">Term Life</div>
+          <div class="product-name">Pure Protection.</div>
+          <p class="product-desc">Simple, affordable coverage for a set period of time.</p>
+          <div class="product-divider"></div>
+          <ul class="product-points">
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Lowest monthly premium</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Coverage for 10, 20, or 30 years</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Tax-free payout to your family</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Best for: income replacement, mortgage</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="btn-product btn-product-light">Learn If Term Is Right For Me</a>
         </div>
-        <h3>No Medical Exam</h3>
-        <p>Most plans require just a few health questions. No needles, no doctor visits, no waiting for lab results.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="product-card featured reveal">
+          <div class="product-badge">Most Flexible</div>
+          <div class="product-name">Growth + Protection.</div>
+          <p class="product-desc">IUL &mdash; Indexed Universal Life</p>
+          <div class="product-divider"></div>
+          <ul class="product-points">
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Cash value linked to a market index</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Protected from downturns &mdash; 0% floor</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Lifetime coverage, flexible premiums</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Best for: tax-advantaged wealth building</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="btn-product btn-product-white">Learn If IUL Is Right For Me</a>
         </div>
-        <h3>Protect Your Family</h3>
-        <p>Benefits are paid directly to your beneficiary, tax-free. They can use the funds for funeral costs, bills, or anything they need.</p>
+        <div class="product-card reveal">
+          <div class="product-tag">Whole Life</div>
+          <div class="product-name">Lifelong Value.</div>
+          <p class="product-desc">Permanent coverage that builds guaranteed cash value.</p>
+          <div class="product-divider"></div>
+          <ul class="product-points">
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Coverage that never expires</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Guaranteed cash value growth</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Fixed premiums &mdash; they never increase</li>
+            <li><div class="product-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Best for: estate planning, final expenses</li>
+          </ul>
+          <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="btn-product btn-product-light">Learn If Whole Life Is Right For Me</a>
+        </div>
       </div>
     </div>
   </section>
@@ -894,126 +646,39 @@
     <div class="reviews-header reveal">
       <div class="section-label">What Our Clients Say</div>
       <h2 class="section-title">Real families, real peace of mind.</h2>
-      <p class="section-sub">Don't just take our word for it &mdash; hear from seniors who got covered through Kenneth Insurance.</p>
+      <p class="section-sub">Don't just take our word for it &mdash; hear from people who got covered through Kenneth Insurance.</p>
     </div>
     <div class="reviews-grid">
       <div class="review-card reveal">
-        <div class="review-stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"Devon made the whole process so easy. I was worried it would be complicated at my age, but he explained everything clearly. I got approved the same day and my premium is very affordable."</p>
-        <div class="review-author">
-          <div class="review-avatar">M</div>
-          <div>
-            <div class="review-name">Margaret T.</div>
-            <div class="review-detail">Age 72 &middot; Tampa, FL</div>
-          </div>
-        </div>
+        <div class="review-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Devon made the whole process so easy. He explained everything clearly, found me the best rate, and I was covered within days. Highly recommend."</p>
+        <div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sarah M.</div><div class="review-detail">Tampa, FL</div></div></div>
       </div>
       <div class="review-card reveal">
-        <div class="review-stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"I didn't want my kids to be stuck with funeral costs. Devon found me a plan for less than what I pay for cable. No exam, no blood work. I wish I had done this sooner."</p>
-        <div class="review-author">
-          <div class="review-avatar">R</div>
-          <div>
-            <div class="review-name">Robert J.</div>
-            <div class="review-detail">Age 68 &middot; Orlando, FL</div>
-          </div>
-        </div>
+        <div class="review-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"I was overwhelmed trying to compare policies on my own. One call with Devon and I had the perfect plan for my family at a price I could actually afford."</p>
+        <div class="review-author"><div class="review-avatar">J</div><div><div class="review-name">James R.</div><div class="review-detail">Orlando, FL</div></div></div>
       </div>
       <div class="review-card reveal">
-        <div class="review-stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="review-text">"My husband and I both got policies through Devon. He was patient, answered all our questions, and never once pressured us. We feel so much better knowing our family is taken care of."</p>
-        <div class="review-author">
-          <div class="review-avatar">L</div>
-          <div>
-            <div class="review-name">Linda &amp; James K.</div>
-            <div class="review-detail">Ages 74 &amp; 76 &middot; St. Petersburg, FL</div>
-          </div>
-        </div>
+        <div class="review-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"My wife and I both got covered. Devon was patient, never pushed us, and found us a plan that fit our budget. We feel so much better knowing our kids are protected."</p>
+        <div class="review-author"><div class="review-avatar">D</div><div><div class="review-name">David &amp; Maria L.</div><div class="review-detail">St. Petersburg, FL</div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ─── Social Proof Bar ─── -->
+  <!-- ─── Social Proof ─── -->
   <div id="social-proof">
     <div class="social-proof-inner reveal">
-      <div class="proof-stat">
-        <div class="proof-stat-num">1,000+</div>
-        <div class="proof-stat-label">Families Protected</div>
-      </div>
+      <div class="proof-stat"><div class="proof-stat-num">1,000+</div><div class="proof-stat-label">Families Protected</div></div>
       <div class="proof-divider"></div>
-      <div class="proof-stat">
-        <div class="proof-stat-num">22+</div>
-        <div class="proof-stat-label">Insurance Carriers</div>
-      </div>
+      <div class="proof-stat"><div class="proof-stat-num">22+</div><div class="proof-stat-label">Insurance Carriers</div></div>
       <div class="proof-divider"></div>
-      <div class="proof-stat">
-        <div class="proof-stat-num">4.9/5</div>
-        <div class="proof-stat-label">Client Rating</div>
-      </div>
+      <div class="proof-stat"><div class="proof-stat-num">4.9/5</div><div class="proof-stat-label">Client Rating</div></div>
       <div class="proof-divider"></div>
-      <div class="proof-stat">
-        <div class="proof-stat-num">Same Day</div>
-        <div class="proof-stat-label">Approval Available</div>
-      </div>
+      <div class="proof-stat"><div class="proof-stat-num">Same Day</div><div class="proof-stat-label">Approval Available</div></div>
     </div>
   </div>
-
-  <!-- ─── Coverage Details ─── -->
-  <section id="coverage">
-    <div class="coverage-inner reveal">
-      <div class="section-label">What's Covered</div>
-      <h2 class="section-title">Simple, whole life coverage<br>built for seniors.</h2>
-      <p class="section-sub">Final expense insurance is a small whole life policy designed to cover end-of-life costs. Here's what you get:</p>
-      <ul class="coverage-list">
-        <li>
-          <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Coverage from $5,000 to $50,000
-        </li>
-        <li>
-          <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Premiums that never increase
-        </li>
-        <li>
-          <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Coverage that never expires
-        </li>
-        <li>
-          <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-          No medical exam required
-        </li>
-        <li>
-          <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Tax-free payout to your beneficiary
-        </li>
-        <li>
-          <div class="check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
-          Builds cash value over time
-        </li>
-      </ul>
-      <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="btn-blue">
-        See What I Qualify For
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </section>
 
   <!-- ─── Carriers ─── -->
   <section id="carriers">
@@ -1022,9 +687,7 @@
       <h2 class="section-title">I shop every carrier<br>so you don't have to.</h2>
       <p class="section-sub">As an independent agent, I compare rates across the top carriers in the country to find you the best price.</p>
     </div>
-    <div class="carousel-wrapper">
-      <div class="carousel-track" id="carouselTrack"></div>
-    </div>
+    <div class="carousel-wrapper"><div class="carousel-track" id="carouselTrack"></div></div>
   </section>
 
   <!-- ─── How It Works ─── -->
@@ -1037,88 +700,41 @@
       <div class="how-steps">
         <div class="how-step reveal">
           <div class="how-step-num">01</div>
-          <div class="how-step-title">Call or Book Online</div>
-          <p class="how-step-text">Pick a time that works for you. The call takes about 15 minutes and is completely free.</p>
+          <div class="how-step-title">Book a Free Call</div>
+          <p class="how-step-text">Pick a time that works for you. The consultation takes about 20 minutes &mdash; completely free, zero obligation.</p>
         </div>
         <div class="how-step reveal">
           <div class="how-step-num">02</div>
-          <div class="how-step-title">I Find Your Best Rate</div>
-          <p class="how-step-text">I compare rates across every carrier to find the most affordable plan that fits your needs. No runaround.</p>
+          <div class="how-step-title">I Shop the Market</div>
+          <p class="how-step-text">I compare rates across every carrier to find the best option for your age, health, and goals. No phone calls on your end.</p>
         </div>
         <div class="how-step reveal">
           <div class="how-step-num">03</div>
-          <div class="how-step-title">You're Covered</div>
-          <p class="how-step-text">I handle the paperwork. Most policies are approved quickly &mdash; often the same day. Your family is protected.</p>
+          <div class="how-step-title">Get Covered</div>
+          <p class="how-step-text">I walk you through the application and handle the details. Most policies are approved and active within days.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── FAQ ─── -->
-  <section id="faq">
-    <div class="section-inner">
-      <div class="faq-header reveal">
-        <div class="section-label">Common Questions</div>
-        <h2 class="section-title">Answers you can trust.</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            What is final expense insurance?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Final expense insurance is a type of whole life insurance with a smaller face value (typically $5,000&ndash;$50,000) designed to cover funeral costs, medical bills, and other end-of-life expenses so your family doesn't have to.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Do I need a medical exam to qualify?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">No. Most final expense policies only require you to answer a few simple health questions. There are no blood tests, no doctor visits, and no physical exams.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            How much does it cost?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Most seniors pay between $30 and $70 per month depending on age, health, and coverage amount. Your premium is locked in at the time of purchase and never increases.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Can I qualify if I have health issues?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Yes. Many carriers offer guaranteed acceptance policies for seniors ages 50&ndash;85 regardless of health conditions. I'll help you find the best option for your specific situation.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-            Is the consultation really free?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">Absolutely. The consultation is 100% free with zero obligation. I'll answer your questions, compare rates, and give you my honest recommendation &mdash; no pressure, no sales pitch.</div>
-          </div>
-        </div>
-      </div>
+  <!-- ─── Seniors Banner ─── -->
+  <div id="seniors-banner" class="reveal">
+    <div class="seniors-banner-inner">
+      <div class="seniors-banner-title">Looking for Final Expense or Burial Coverage?</div>
+      <p class="seniors-banner-sub">We specialize in affordable coverage for seniors ages 50&ndash;85. No medical exam, simple application, same-day approval.</p>
+      <a href="seniorsinsurance.html" class="btn-charcoal">
+        View Senior Plans
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
-  </section>
+  </div>
 
   <!-- ─── CTA Final ─── -->
   <section id="cta-final">
     <div class="cta-final-inner reveal">
-      <div class="section-label">Ready to Get Started?</div>
-      <h2 class="cta-final-title">
-        Give your family<br><em>peace of mind.</em>
-      </h2>
-      <p class="cta-final-sub">A free consultation costs nothing. I'll find you the best rate and walk you through everything &mdash; no pressure, no obligation.</p>
+      <div class="section-label">Ready to Get Covered?</div>
+      <h2 class="cta-final-title">Your family deserves to<br>be <em>protected.</em></h2>
+      <p class="cta-final-sub">Book a free, no-pressure consultation. I'll shop every carrier and find you the best rate &mdash; in one 20-minute call.</p>
       <a href="tel:8136948818" class="cta-final-phone">813-694-8818</a>
       <div class="cta-final-actions">
         <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="btn-blue">
@@ -1139,21 +755,16 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#hero" class="nav-logo">
-            <div class="logo-shield">
-              <svg width="28" height="32" viewBox="0 0 30 34" fill="none">
-                <path d="M15 0L0 6v10c0 9.94 6.4 19.24 15 22 8.6-2.76 15-12.06 15-22V6L15 0z" fill="#2563EB"/>
-                <path d="M15 2.5L2.5 7.5v8.5c0 8.5 5.5 16.5 12.5 19 7-2.5 12.5-10.5 12.5-19V7.5L15 2.5z" fill="#1D4ED8"/>
-                <path d="M12 18l-3.5-3.5 1.4-1.4L12 15.2l6.1-6.1 1.4 1.4L12 18z" fill="white"/>
-              </svg>
-            </div>
+            <div class="logo-shield"><svg width="28" height="32" viewBox="0 0 30 34" fill="none"><path d="M15 0L0 6v10c0 9.94 6.4 19.24 15 22 8.6-2.76 15-12.06 15-22V6L15 0z" fill="#2563EB"/><path d="M15 2.5L2.5 7.5v8.5c0 8.5 5.5 16.5 12.5 19 7-2.5 12.5-10.5 12.5-19V7.5L15 2.5z" fill="#1D4ED8"/><path d="M12 18l-3.5-3.5 1.4-1.4L12 15.2l6.1-6.1 1.4 1.4L12 18z" fill="white"/></svg></div>
             <span class="logo-text" style="color:#fff;">Kenneth Insurance</span>
           </a>
-          <p class="footer-tagline">Final expense insurance for seniors &mdash; one call, the best rate, total peace of mind.</p>
+          <p class="footer-tagline">Independent life insurance guidance &mdash; one call, every carrier, the best rate.</p>
         </div>
         <div class="footer-contact">
           <h4>Get In Touch</h4>
           <a href="tel:8136948818" class="footer-phone-large">813-694-8818</a>
           <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener">Book a Free Consultation &rarr;</a>
+          <a href="seniorsinsurance.html">Senior &amp; Final Expense Plans &rarr;</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1163,7 +774,6 @@
     </div>
   </footer>
 
-  <!-- ─── Scripts ─── -->
   <script>
     var carriers = [
       'Banner / LGA', 'SBLI', 'AHL', 'F&G', 'GTL',
@@ -1172,7 +782,6 @@
       'Corebridge', 'Ladder', 'Chubb', 'Ameritas', 'Ethos',
       'Aetna', 'United Health', 'Allstate', 'AmAm', 'CICA'
     ];
-
     function buildCarousel() {
       var track = document.getElementById('carouselTrack');
       var html = '';
@@ -1184,34 +793,11 @@
       track.innerHTML = html;
     }
     buildCarousel();
-
-    // Nav compact on scroll
     var navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', function() {
-      navbar.classList.toggle('compact', window.scrollY > 50);
-    }, { passive: true });
-
-    // Scroll reveal
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
+    window.addEventListener('scroll', function() { navbar.classList.toggle('compact', window.scrollY > 50); }, { passive: true });
+    var observer = new IntersectionObserver(function(entries) { entries.forEach(function(entry) { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-      a.addEventListener('click', function(e) {
-        var target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) { a.addEventListener('click', function(e) { var target = document.querySelector(a.getAttribute('href')); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
   </script>
 </body>
 </html>

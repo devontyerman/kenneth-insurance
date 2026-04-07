@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenneth Insurance — Final Expense &amp; Burial Insurance for Seniors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:        #FFFFFF;
+      --bg:           #F7F8FA;
+      --blue:         #2563EB;
+      --blue-dark:    #1D4ED8;
+      --blue-light:   #EFF6FF;
+      --blue-mid:     #DBEAFE;
+      --charcoal:     #1F2937;
+      --charcoal-deep:#111827;
+      --text:         #1F2937;
+      --muted:        #6B7280;
+      --border:       #E5E7EB;
+      --border-2:     #D1D5DB;
+      --gold:         #F59E0B;
+      --green:        #16A34A;
+      --font:         'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Sticky CTA Bar (top) ─── */
+    .sticky-top {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      background: var(--blue);
+      padding: 12px 24px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .sticky-top-text {
+      font-size: 15px; font-weight: 600; color: var(--white);
+    }
+    .sticky-top-phone {
+      font-size: 16px; font-weight: 800; color: var(--white);
+      text-decoration: none; transition: opacity 0.2s;
+    }
+    .sticky-top-phone:hover { opacity: 0.85; }
+    .sticky-top-btn {
+      background: var(--white); color: var(--blue);
+      font-size: 14px; font-weight: 800; text-decoration: none;
+      padding: 10px 24px; border-radius: 8px;
+      font-family: var(--font);
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .sticky-top-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* ─── Hero ─── */
+    #hero {
+      padding: 100px 24px 60px;
+      text-align: center;
+      background: var(--white);
+    }
+    .hero-inner {
+      max-width: 700px; margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--blue-light); border: 1px solid var(--blue-mid);
+      border-radius: 100px; padding: 8px 20px 8px 10px;
+      margin-bottom: 28px;
+    }
+    .hero-badge-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-badge span {
+      font-size: 14px; font-weight: 700; color: var(--blue);
+    }
+
+    .hero-title {
+      font-size: clamp(32px, 6vw, 54px);
+      font-weight: 700; color: var(--charcoal);
+      line-height: 1.1; letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+    .hero-title em { font-style: normal; color: var(--blue); }
+
+    .hero-sub {
+      font-size: 20px;
+      color: var(--muted); line-height: 1.6;
+      max-width: 560px; margin: 0 auto 40px;
+    }
+
+    .hero-cta {
+      background: var(--blue); color: var(--white);
+      border: none; padding: 22px 48px; border-radius: 12px;
+      font-size: 20px; font-weight: 800; font-family: var(--font);
+      cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 6px 24px rgba(37,99,235,0.35);
+    }
+    .hero-cta:hover {
+      background: var(--blue-dark); transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(37,99,235,0.45);
+    }
+
+    .hero-or {
+      display: block; margin: 20px auto 0;
+      font-size: 16px; color: var(--muted);
+    }
+    .hero-phone {
+      font-size: 24px; font-weight: 800; color: var(--charcoal);
+      text-decoration: none; display: inline-block; margin-top: 8px;
+      transition: color 0.2s;
+    }
+    .hero-phone:hover { color: var(--blue); }
+
+    .hero-micro {
+      margin-top: 32px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 24px; flex-wrap: wrap;
+      font-size: 14px; color: var(--muted);
+    }
+    .hero-micro-item {
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* ─── Trust Numbers ─── */
+    #trust-numbers {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 24px;
+    }
+    .trust-numbers-inner {
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .tn-stat { text-align: center; }
+    .tn-num { font-size: 36px; font-weight: 800; color: var(--charcoal); letter-spacing: -1px; }
+    .tn-label { font-size: 14px; color: var(--muted); margin-top: 2px; }
+    .tn-divider { width: 1px; height: 44px; background: var(--border); }
+
+    /* ─── Section Shared ─── */
+    .section-label {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--blue); margin-bottom: 12px;
+    }
+    .section-label::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); }
+
+    /* ─── What You Get ─── */
+    #benefits {
+      padding: 72px 24px;
+      background: var(--white);
+    }
+    .benefits-inner {
+      max-width: 600px; margin: 0 auto; text-align: center;
+    }
+    .benefits-title {
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 700; color: var(--charcoal);
+      letter-spacing: -1.5px; line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .benefits-sub {
+      font-size: 18px; color: var(--muted); line-height: 1.6; margin-bottom: 40px;
+    }
+
+    .benefits-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 14px;
+      text-align: left;
+      max-width: 480px; margin: 0 auto 40px;
+    }
+    .benefits-list li {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 18px; font-weight: 500; color: var(--charcoal);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      line-height: 1.4;
+    }
+    .benefit-check {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--blue); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ─── How It Works ─── */
+    #steps {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 72px 24px;
+    }
+    .steps-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+    .steps-title {
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 700; color: var(--charcoal);
+      letter-spacing: -1.5px; margin-bottom: 48px;
+    }
+    .steps-grid {
+      display: flex; flex-direction: column; gap: 24px;
+      text-align: left;
+    }
+    .step-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 28px;
+      display: flex; align-items: flex-start; gap: 20px;
+    }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--blue); color: var(--white);
+      font-size: 20px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-content {}
+    .step-title { font-size: 20px; font-weight: 700; color: var(--charcoal); margin-bottom: 6px; }
+    .step-text { font-size: 16px; color: var(--muted); line-height: 1.6; }
+
+    /* ─── Reviews ─── */
+    #reviews {
+      padding: 72px 24px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .reviews-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+    .reviews-title {
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 700; color: var(--charcoal);
+      letter-spacing: -1.5px; margin-bottom: 12px;
+    }
+    .reviews-sub {
+      font-size: 18px; color: var(--muted); margin-bottom: 40px;
+    }
+    .reviews-list {
+      display: flex; flex-direction: column; gap: 20px;
+      text-align: left;
+    }
+    .review-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .review-text {
+      font-size: 17px; color: var(--charcoal); line-height: 1.6;
+      margin-bottom: 18px; font-style: italic;
+    }
+    .review-author {
+      display: flex; align-items: center; gap: 12px;
+      padding-top: 14px; border-top: 1px solid var(--border);
+    }
+    .review-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--blue-light); border: 1px solid var(--blue-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: var(--blue); flex-shrink: 0;
+    }
+    .review-name { font-size: 16px; font-weight: 600; color: var(--charcoal); }
+    .review-detail { font-size: 14px; color: var(--muted); margin-top: 2px; }
+
+    /* ─── Agent Section ─── */
+    #agent {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 60px 24px;
+    }
+    .agent-inner {
+      max-width: 540px; margin: 0 auto;
+      text-align: center;
+    }
+    .agent-photo {
+      width: 100px; height: 100px; border-radius: 50%;
+      object-fit: cover; object-position: center 15%;
+      border: 4px solid var(--blue-mid);
+      margin-bottom: 16px;
+    }
+    .agent-name { font-size: 24px; font-weight: 700; color: var(--charcoal); }
+    .agent-role { font-size: 15px; color: var(--blue); font-weight: 500; margin-top: 4px; margin-bottom: 16px; }
+    .agent-bio { font-size: 17px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+
+    /* ─── FAQ ─── */
+    #faq {
+      padding: 72px 24px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+    .faq-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+    .faq-title {
+      font-size: clamp(26px, 4.5vw, 38px);
+      font-weight: 700; color: var(--charcoal);
+      letter-spacing: -1.5px; margin-bottom: 40px;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+    .faq-item { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .faq-question {
+      width: 100%; padding: 20px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      background: none; border: none; cursor: pointer;
+      font-family: var(--font); font-size: 17px; font-weight: 600; color: var(--charcoal);
+      text-align: left;
+    }
+    .faq-question:hover { color: var(--blue); }
+    .faq-chevron { width: 22px; height: 22px; flex-shrink: 0; transition: transform 0.3s ease; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer-inner { padding: 0 24px 20px; font-size: 16px; color: var(--muted); line-height: 1.7; }
+
+    /* ─── Final CTA ─── */
+    #final-cta {
+      background: var(--charcoal-deep);
+      padding: 80px 24px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    #final-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .final-cta-inner { max-width: 560px; margin: 0 auto; position: relative; z-index: 1; }
+    .final-cta-title {
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 700; color: var(--white);
+      letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px;
+    }
+    .final-cta-title em { font-style: normal; color: var(--blue); }
+    .final-cta-sub {
+      font-size: 18px; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 36px;
+    }
+    .final-cta-btn {
+      background: var(--blue); color: var(--white);
+      border: none; padding: 22px 48px; border-radius: 12px;
+      font-size: 20px; font-weight: 800; font-family: var(--font);
+      cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 12px;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 6px 24px rgba(37,99,235,0.4);
+    }
+    .final-cta-btn:hover {
+      background: var(--blue-dark); transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(37,99,235,0.5);
+    }
+    .final-cta-phone {
+      display: block; margin-top: 20px;
+      font-size: 22px; font-weight: 800; color: var(--white);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .final-cta-phone:hover { color: var(--blue); }
+    .final-cta-micro {
+      margin-top: 28px; font-size: 14px; color: rgba(255,255,255,0.3);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: #0B0F18; padding: 32px 24px 24px; text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 16px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.3); text-decoration: none;
+      font-size: 14px; margin: 0 12px; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.12); margin-bottom: 8px; }
+    .footer-disc { font-size: 11px; color: rgba(255,255,255,0.08); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      .sticky-top { padding: 10px 16px; gap: 10px; }
+      .sticky-top-text { font-size: 13px; }
+      .sticky-top-phone { display: none; }
+      #hero { padding: 90px 16px 48px; }
+      .hero-title { font-size: 32px; }
+      .hero-sub { font-size: 17px; }
+      .hero-cta { padding: 18px 32px; font-size: 17px; width: 100%; justify-content: center; }
+      .hero-micro { gap: 12px; }
+      .trust-numbers-inner { gap: 20px; }
+      .tn-divider { display: none; }
+      #benefits, #steps, #reviews, #faq, #final-cta, #agent { padding-left: 16px; padding-right: 16px; }
+      .benefits-list li { font-size: 16px; padding: 14px 16px; }
+      .step-card { flex-direction: column; gap: 12px; }
+      .final-cta-btn { width: 100%; justify-content: center; font-size: 17px; padding: 18px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Sticky Top Bar ─── -->
+  <div class="sticky-top">
+    <span class="sticky-top-text">Free Consultation &mdash;</span>
+    <a href="tel:8136948818" class="sticky-top-phone">813-694-8818</a>
+    <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="sticky-top-btn">Book Now</a>
+  </div>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <div class="hero-badge-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>Trusted by 1,000+ Families</span>
+      </div>
+
+      <h1 class="hero-title">
+        Don't Leave Your Family<br>With the <em>Burden.</em>
+      </h1>
+
+      <p class="hero-sub">
+        Final expense insurance covers funeral costs, medical bills, and other end-of-life expenses &mdash; so your loved ones don't have to.
+      </p>
+
+      <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="hero-cta">
+        Get My Free Quote
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <span class="hero-or">or call directly</span>
+      <a href="tel:8136948818" class="hero-phone">813-694-8818</a>
+
+      <div class="hero-micro">
+        <div class="hero-micro-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          No medical exam
+        </div>
+        <div class="hero-micro-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Ages 50&ndash;85
+        </div>
+        <div class="hero-micro-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-day approval
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Trust Numbers ─── -->
+  <div id="trust-numbers">
+    <div class="trust-numbers-inner">
+      <div class="tn-stat"><div class="tn-num">1,000+</div><div class="tn-label">Families Protected</div></div>
+      <div class="tn-divider"></div>
+      <div class="tn-stat"><div class="tn-num">$30&ndash;$70</div><div class="tn-label">Typical Monthly Cost</div></div>
+      <div class="tn-divider"></div>
+      <div class="tn-stat"><div class="tn-num">4.9/5</div><div class="tn-label">Client Rating</div></div>
+    </div>
+  </div>
+
+  <!-- ─── Benefits ─── -->
+  <section id="benefits">
+    <div class="benefits-inner">
+      <div class="section-label" style="justify-content:center;">What You Get</div>
+      <h2 class="benefits-title">Simple coverage.<br>Total peace of mind.</h2>
+      <p class="benefits-sub">Final expense insurance is a small whole life policy that covers everything your family needs.</p>
+
+      <ul class="benefits-list">
+        <li>
+          <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Coverage from $5,000 to $50,000
+        </li>
+        <li>
+          <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Premiums that never increase
+        </li>
+        <li>
+          <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          No medical exam required
+        </li>
+        <li>
+          <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Coverage that never expires
+        </li>
+        <li>
+          <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Tax-free payout to your beneficiary
+        </li>
+        <li>
+          <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Accepted even with health conditions
+        </li>
+      </ul>
+
+      <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="hero-cta">
+        See What I Qualify For
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── How It Works ─── -->
+  <section id="steps">
+    <div class="steps-inner">
+      <div class="section-label" style="justify-content:center;">How It Works</div>
+      <h2 class="steps-title">3 simple steps to<br>protect your family.</h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Book a Free Call</div>
+            <p class="step-text">Pick a time that works for you. Takes about 15 minutes. No cost, no obligation.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">I Find Your Best Rate</div>
+            <p class="step-text">I compare rates from 22+ carriers to find you the most affordable plan. You don't have to call anyone else.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title">You're Covered</div>
+            <p class="step-text">I handle the paperwork. Most policies are approved the same day. Your family is protected.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Reviews ─── -->
+  <section id="reviews">
+    <div class="reviews-inner">
+      <div class="section-label" style="justify-content:center;">Real Stories</div>
+      <h2 class="reviews-title">Hear from seniors<br>just like you.</h2>
+      <p class="reviews-sub">Real families who got covered through Kenneth Insurance.</p>
+
+      <div class="reviews-list">
+        <div class="review-card">
+          <div class="review-stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="review-text">"Devon made the whole process so easy. I was worried it would be complicated at my age, but he explained everything clearly. I got approved the same day."</p>
+          <div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Margaret T.</div><div class="review-detail">Age 72 &middot; Tampa, FL</div></div></div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="review-text">"I didn't want my kids stuck with funeral costs. Devon found me a plan for less than what I pay for cable. No exam, no blood work. Wish I had done this sooner."</p>
+          <div class="review-author"><div class="review-avatar">R</div><div><div class="review-name">Robert J.</div><div class="review-detail">Age 68 &middot; Orlando, FL</div></div></div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <p class="review-text">"My husband and I both got policies. Devon was patient, answered all our questions, and never once pressured us. We feel so much better now."</p>
+          <div class="review-author"><div class="review-avatar">L</div><div><div class="review-name">Linda &amp; James K.</div><div class="review-detail">Ages 74 &amp; 76 &middot; St. Petersburg, FL</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Your Agent ─── -->
+  <section id="agent">
+    <div class="agent-inner">
+      <img src="Color%20PFP.jpeg" alt="Devon" class="agent-photo" />
+      <div class="agent-name">Devon</div>
+      <div class="agent-role">Licensed Insurance Agent &middot; Kenneth Insurance</div>
+      <p class="agent-bio">I help seniors find affordable final expense coverage &mdash; no pressure, no jargon. As an independent agent, I shop 22+ carriers to get you the best rate in one simple call. I'm here to make this easy for you.</p>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="hero-cta">
+        Book a Free Call With Devon
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section id="faq">
+    <div class="faq-inner">
+      <div class="section-label" style="justify-content:center;">Common Questions</div>
+      <h2 class="faq-title">Answers you can trust.</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            What is final expense insurance?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Final expense insurance is a type of whole life insurance with a smaller face value ($5,000&ndash;$50,000) designed to cover funeral costs, medical bills, and other end-of-life expenses so your family doesn't have to.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Do I need a medical exam?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. Most final expense policies only require a few simple health questions. No blood tests, no doctor visits, no physical exams.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            How much does it cost?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Most seniors pay between $30 and $70 per month depending on age, health, and coverage amount. Your premium is locked in and never increases.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Can I qualify with health issues?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Many carriers offer guaranteed acceptance for seniors ages 50&ndash;85 regardless of health. I'll find the best option for your situation.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+            Is the consultation really free?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">100% free. No obligation. I'll answer your questions, compare rates, and give you my honest recommendation &mdash; no pressure.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Final CTA ─── -->
+  <section id="final-cta">
+    <div class="final-cta-inner">
+      <h2 class="final-cta-title">
+        Give your family<br><em>peace of mind</em><br>today.
+      </h2>
+      <p class="final-cta-sub">The average funeral costs over $7,000. A free 15-minute call is all it takes to make sure your family is never left with that burden.</p>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener" class="final-cta-btn">
+        Book My Free Consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="tel:8136948818" class="final-cta-phone">813-694-8818</a>
+      <p class="final-cta-micro">No cost &middot; No obligation &middot; No pressure</p>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tel:8136948818">813-694-8818</a>
+      <a href="https://api.leadconnectorhq.com/widget/bookings/insurance-consultation-devon" target="_blank" rel="noopener">Book Consultation</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Kenneth Insurance. All rights reserved.</p>
+    <p class="footer-disc">Licensed independent life insurance agent. Insurance products and availability vary by state. This site is for informational purposes only and does not constitute a binding offer of insurance.</p>
+  </footer>
+
+</body>
+</html>
